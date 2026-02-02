@@ -1,0 +1,25 @@
+First trial, t = 0.1
+I am in class because I am a student. I am not a student. I am not a student. I am not
+Rating: ~7
+
+
+Second trial, t = 0.8
+I am in class because I'm interested in getting my undergraduate degree with a degree in engineering, so I'm looking forward to
+Rating: 9
+
+Third trial, t = 2.0
+I am in class because of that (though not entirely to our liking), I have always tried (once and for all)
+Rating: 4
+
+Did your model repeat any words or phrases?
+The model repeated itself most when the temperature was low. Persumably, the same words were strong choices for completing the prompt so when the model was selecting words, it ended up choosing the same words.
+With low temperature, the model was less interested in picking good choices and put any token that would fit.
+
+Did the model use real words, or did it start outputting random characters and punctuation? Explain how the "Probability Distribution" changed to allow this.
+Even with a high temperature, the model mostly stuck to real words in the english language although it added some unnecessary parenthesis.
+We instructed the model to stay within the top 40 best choices so even a completely random selection would output something somewhat reasonable.
+
+If you were building a medical AI to give prescriptions or advice, which temperature would you use?
+For something that needs to be precise and to the point, a very low temperature should be used. I would suggest using t = 0.01 to be sure.
+If you were building an AI to write a surrealist dream-journal, which would you use?
+A surrealist dream-journal requires creativeness. A temperature of 0.8 should be big enough to give room for creative responses but small enough that the AI doesn't give nonsense.
